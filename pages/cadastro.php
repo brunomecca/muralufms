@@ -4,17 +4,18 @@
         <?php
             include_once("../connect.php");
         ?>
-        <link rel="icon" type="image/png" href="../images/mural-ufms.png">
+        <link rel="icon" type="image/png" href="../img/mural-ufms.png">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
         <script src="../js/jquery.js"></script>
         <script src="../js/bootstrap.min.js"></script>
-
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+       
 
         <title>Mural UFMS - Cadastro</title>
     </head>
-    <body>
+    <body class="cadastro-page">
         
          <div id="form-cadastro" class="container">
             <div class="row">
@@ -36,35 +37,47 @@
                             
                         }
                     ?>
-                    <h1>Mural UFMS - Cadastro</h1>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Coloque seu nome!">
+
+                    <div id="panel-cadastro" class="panel panel-default">
+                        <img id="imagem-cadastro" src="../img/mural-ufms.png"/>
+                    
+                        <h2>Cadastre-se e tenha acesso a recursos exclusivos ! </h2>
+                        <form name="form-cadastro form-horizontal" onsubmit="return validarCadastro()" action="" method="post" enctype="multipart/form-data" class="form-signin">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Coloque seu nome!">
+                                    <span></span>
+                            </div>
+                            <p></p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glypicon glyphicon-envelope"></i></span>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Coloque seu e-mail!">
+                                    <span></span>
+                            </div>
+                            <p></p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Coloque o seu nome de usuario ! " required="true" />
+                                <span></span>
+                            </div>
+                            <p></p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Coloque a sua senha ! " required="true" />
+                                <span></span>
+                            </div>
+                            <p></p>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Coloque a sua senha ! " required="true" />
+                                <span></span>
+                            </div>
+                            <p></p>
+                            <input type="hidden" name="acao" value="cadastrar" />
+                            <input type="submit" value="Cadastrar" class="btn btn-lg btn-primary" />
                         </div>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glypicon glyphicon-envelope"></i></span>
-                                <input type="text" id="email" name="email" class="form-control" placeholder="Coloque seu e-mail!">
-                        </div>
-                        <p></p>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="text" id="username" name="username" class="form-control" placeholder="Coloque o seu nome de usuario ! " required="true" />
-                        </div>
-                        <p></p>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                            <input type="password" id="password" name="password" class="form-control" placeholder="Coloque a sua senha ! " required="true" />
-                        </div>
-                        <p></p>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                            <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Coloque a sua senha ! " required="true" />
-                        </div>
-                        <input type="hidden" name="acao" value="cadastrar" />
-                        <input type="submit" value="Cadastrar" class="btn" />
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
          </div>

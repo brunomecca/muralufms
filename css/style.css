@@ -17,7 +17,24 @@ and open the template in the editor.
 
 
 /**
-    LOGIN
+    NAVBAR
+ */
+
+ .nav , .nav a {
+
+    color : white !important;
+ }
+
+.nav a:hover {
+    color: yellow !important;
+}
+
+.navbar-brand {
+    color : white !important;
+}
+
+/**
+    LOGIN E CADASTRO
  */
 
 #form-login .input-group,#form-cadastro .input-group{
@@ -35,6 +52,14 @@ and open the template in the editor.
 
     width: 50%;
 }
+
+#panel-cadastro {
+    padding-top : 20px;
+    padding-bottom: 30px;
+}
+
+
+
 
 .has-success .input-group-addon{
     border-color: var(--light-green) !important;
