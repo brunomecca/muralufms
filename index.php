@@ -50,7 +50,7 @@
 					include('pages/mensagem.php');
 				}
 				else{
-					$seleciona = mysqli_query($link,"SELECT * FROM mensagens");
+					$seleciona = mysqli_query($link,"SELECT * FROM mensagens ORDER BY id DESC");
 					$conta = @mysqli_num_rows($seleciona);
 					if($conta != 0){
 						while($lnMsg = mysqli_fetch_array($seleciona)){

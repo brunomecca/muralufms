@@ -3,6 +3,7 @@
     <head>
         <?php
             include_once("../connect.php");
+            mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         ?>
         <link rel="icon" type="image/png" href="../img/mural-ufms.png">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -32,7 +33,14 @@
                                 echo "<div class='alert alert-danger' role='alert'>As senhas não são iguais!</div>";
                             }
                             else{
-                                $inseresql = mysqli_query($link, "INSERT INTO usuarios (nome, email, senha, usuario) VALUES ('$nome', '$email', '$senha', '$usuario')");
+                                try{
+                                    $inseresql = mysqli_query($link, "INSERT INTO usuarios (nome, email, senha, usuario) VALUES ('$nome', '$email', '$senha', '$usuario')");
+                                    header("../Location:index.php");
+                                }
+                                catch(Exception $e){
+                                    "<div class='alert alert-danger' role='alert'>O email já está cadastrado!</div>";
+                                }
+                                
                             }
                             
                         }
