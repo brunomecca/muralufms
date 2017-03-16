@@ -53,6 +53,24 @@ function validate(element)
                     finalMessage = "* Nome muito grande ! ";
                 }
                 break;
+            case 'nome':
+                if(userData.val().length < 100)
+                {
+                    var valChars = /^[a-záàâãéèêíïóôõöúçñ.\s]+$/ig ;
+                    if(valChars.test(userData.val()))
+                    {
+                        finalResult = true;
+                    }
+                    else
+                    {
+                        finalMessage = "* Somente use letras !";
+                    }
+                }
+                else
+                {
+                    finalMessage = "* Nome muito grande ! ";
+                }
+                break;
             case 'email':
                 if(userData.val().length < 100)
                 {

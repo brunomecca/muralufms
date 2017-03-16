@@ -7,6 +7,8 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
 
         <title>Mural UFMS - Cadastro</title>
     </head>
@@ -60,11 +62,11 @@
                         <input type="hidden" name="acao" value="cadastrar" />
                         <input type="submit" value="Cadastrar" class="btn" />
                     </div>
-                    
                     </form>
                 </div>
             </div>
          </div>
+        <script type="text/javascript" src="../js/cadastro.js"></script>   
     </body>
 </html>
 
