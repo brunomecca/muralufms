@@ -21,30 +21,6 @@
          <div id="form-cadastro" class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                    <?php
-                        if(isset($_POST['acao']) && $_POST['acao'] == 'cadastrar'){
-                            $usuario = $_POST['username'];
-                            $nome = ucfirst($_POST['nome']);
-                            $email = $_POST['email'];
-                            $senha = $_POST['password'];
-                            $senha2 = $_POST['confirm-password'];
-                
-                            if($senha != $senha2){
-                                echo "<div class='alert alert-danger' role='alert'>As senhas não são iguais!</div>";
-                            }
-                            else{
-                                try{
-                                    $inseresql = mysqli_query($link, "INSERT INTO usuarios (nome, email, senha, usuario) VALUES ('$nome', '$email', '$senha', '$usuario')");
-                                    header("Location:../index.php");
-                                }
-                                catch(Exception $e){
-                                    "<div class='alert alert-danger' role='alert'>O email já está cadastrado!</div>";
-                                }
-                                
-                            }
-                            
-                        }
-                    ?>
 
                     <div id="panel-cadastro" class="panel panel-default">
                         <img id="imagem-cadastro" src="../img/mural-ufms.png"/>
@@ -93,3 +69,6 @@
     </body>
 </html>
 
+<?php
+    include "../controllers/UsuarioControle.php";
+?>

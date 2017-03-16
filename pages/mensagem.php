@@ -21,21 +21,12 @@
 					Tipo de mensagem:<br>
 					<input type="radio" name="opiniao" value="positivo" checked><span class="label label-success">Positiva</span><br>
   					<input type="radio" name="opiniao" value="negativo"> <span class="label label-danger">Negativa</span><br><br>
-                    <input type="hidden" name="acao" value="cadastrar" />
+                    <input type="hidden" name="acao" value="cadastrarMensagem" />
                     <input type="submit" class="btn btn-primary btn-sm" value="Enviar" class="btn" />
 			    </form>
 		    </div>
 		</div>
 <?php
-	if(isset($_POST['acao']) && $_POST['acao'] == 'cadastrar'){
-		$titulo = ucfirst($_POST['titulo']);
-		$mensagem = ucfirst($_POST['mensagem']);
-		$id_usuario = $_SESSION['id'];
-		$opiniao = ($_POST['opiniao']);
-
-		$inseresql = mysqli_query($link, "INSERT INTO mensagens (id_usuario, titulo, mensagem, opiniao) VALUES ('$id_usuario', '$titulo', '$mensagem', '$opiniao')");
-		echo '<div class="alert alert-success" role="alert">Enviado com sucesso!</div>';
-		
-	}
+	include "controllers/MensagemControle.php";
 ?>
 </div>
