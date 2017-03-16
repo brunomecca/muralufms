@@ -35,7 +35,7 @@
                             else{
                                 try{
                                     $inseresql = mysqli_query($link, "INSERT INTO usuarios (nome, email, senha, usuario) VALUES ('$nome', '$email', '$senha', '$usuario')");
-                                    header("../Location:index.php");
+                                    header("Location:../index.php");
                                 }
                                 catch(Exception $e){
                                     "<div class='alert alert-danger' role='alert'>O email já está cadastrado!</div>";
