@@ -4,11 +4,13 @@
         <?php
             include_once("../connect.php");
         ?>
+        <link rel="icon" type="image/png" href="../images/mural-ufms.png">
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
         <script src="../js/jquery.js"></script>
         <script src="../js/bootstrap.min.js"></script>
+
 
         <title>Mural UFMS - Cadastro</title>
     </head>
