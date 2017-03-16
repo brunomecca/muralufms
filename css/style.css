@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 11, 2017, 5:55:26 PM
+    Author     : Marco Cardoso
+*/
+
+/**
+    VARIAVEIS
+ */
+:root {
+    --light-green : #2dff16;
+}
+
+
+/**
+    LOGIN
+ */
+
+#form-login .input-group,#form-cadastro .input-group{
+    margin: 10px !important;
+    padding: 4px;
+}
+
+#form-login p,#form-cadastro p{
+    text-align: left;
+}
+
+#form-login ,#form-cadastro{
+    position: relative;
+    top: 100px;
+
+    width: 50%;
+}
+
+.has-success .input-group-addon{
+    border-color: var(--light-green) !important;
+    color: white !important;
+    background-color: var(--light-green) !important;
+    box-shadow: 0px 0px 10px var(--light-green) !important;
+
+}
+
+
+.has-success .form-control {
+    border-color: var(--light-green)  !important;
+    color : var(--light-green) !important;
+}
+
+.has-error .input-group-addon{
+    border-color: red !important;
+    color: white !important;
+    background-color : red !important;
+    box-shadow: 0px 0px 10px red !important;
+}
+
+.has-error .form-control{
+    border-color: red !important;
+    color : red !important;
+}
+
+.error-message {
+    margin-left: 20px;
+    font-family: Impact;
+    color : red;
+}
+
+#oi{
+	
+}
+
+#text{
+	
+}
+
