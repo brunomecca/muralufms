@@ -68,7 +68,8 @@ and open the template in the editor.
     color : red;
 }
 
-.por3{
-	width:300px;
+.limitadorPanel{
+	width:280px !important;
+    height:120px;
 }
 

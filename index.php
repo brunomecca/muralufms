@@ -3,11 +3,14 @@
 <head>
 	<?php
 		include_once "connect.php";
+		include_once("func/funcoes.php");
 		session_start();
 	?>
 	<title>Mural UFMS</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/jquery.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -46,13 +49,36 @@
 					echo "<div class='col-md-3'>";
 				    if($lnMsg['opiniao'] == 'positivo'){
 				     	echo '<div class="panel panel-default panel-success">';
-				        echo '<div class="panel-heading">'. $lnMsg['titulo'] .'</div>';
+				        echo '<div class="panel-heading">'. limitar($lnMsg['titulo'],50) .'</div>';
 					}
 					else{
 						echo '<div class="panel panel-default panel-danger">';
-						echo '<div class="panel-heading">'. $lnMsg['titulo'] . '</div>';
+						echo '<div class="panel-heading">'. limitar($lnMsg['titulo'],50) . '</div>';
 					}
-					echo '<div class="panel-body">' . $lnMsg['mensagem'] . '</div>';
+					echo '<div class="limitadorPanel"><div class="panel-body">' . limitar($lnMsg['mensagem'],100);
+					if(strlen($lnMsg['mensagem']) > 100){
+						echo '<br><button class="btn btn-default btn-xs" data-target="#conteudoMensagem" data-toggle="modal">Ler mais</button></div></div>';
+						echo '<div class="modal fade" id="conteudoMensagem" role="dialog">
+							    <div class="modal-dialog">
+							    
+							      <div class="modal-content">
+							        <div class="modal-header">
+							          <button type="button" class="close" data-dismiss="modal">&times;</button>
+							          <h4 class="modal-title">'.$lnMsg['titulo'].'</h4>
+							        </div>
+							        <div class="modal-body">
+							          <p>'. $lnMsg['mensagem'] .'</p>
+							        </div>
+							        <div class="modal-footer">
+							          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+							        </div>
+							      </div>
+							      
+							    </div>
+							  </div>';
+					}else
+						echo '</div></div>';
+
 					echo '</div>';
 					echo '</div>';
 		?>
