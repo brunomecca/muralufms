@@ -18,7 +18,7 @@
                     <?php
                         if(isset($_POST['acao']) && $_POST['acao'] == 'cadastrar'){
                             $usuario = $_POST['username'];
-                            $nome = $_POST['nome'];
+                            $nome = ucfirst($_POST['nome']);
                             $email = $_POST['email'];
                             $senha = $_POST['password'];
                             $senha2 = $_POST['confirm-password'];
