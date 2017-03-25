@@ -1,5 +1,5 @@
 <?php
-	include "connect.php";
+	$link = mysqli_connect("localhost","root","","muralufms");
 	class MensagemDAO{
 		public static function adicionarNoBanco($mensagem){
 			$titulo = $mensagem.getTitulo();
