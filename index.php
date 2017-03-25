@@ -28,7 +28,7 @@
 					echo $mensagens;
 
 
-					include "view/partes/footer.php";
+					
 				?>
 
 
@@ -36,5 +36,12 @@
 				
 
 			</div><!-- container fluid-->
+
+
+			<?php
+
+				include "view/partes/footer.php";
+
+			?>
 	</body>
 </html>

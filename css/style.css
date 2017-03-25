@@ -13,6 +13,7 @@ and open the template in the editor.
  */
 :root {
     --light-green : #2dff16;
+    --cor-fonte-footer : white;
 }
 
 
@@ -97,4 +98,22 @@ and open the template in the editor.
 	width:280px !important;
     height:120px;
 }
+
+
+/**
+    FOOTER
+ */
+
+ footer {
+
+    margin-top: 10px;
+    padding-top: 20px;
+    background-color : black ;
+    color: var(--cor-fonte-footer) ;
+
+ }
+
+
+
+
 

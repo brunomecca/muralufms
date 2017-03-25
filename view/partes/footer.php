@@ -4,15 +4,19 @@
 
 			<div class='text-center'>
 
-				©Copyright Mural UFMS 
+				<p>©Copyright Mural UFMS
 
 					<script>
 
-						Date();
+						var ano = new Date().getFullYear();
+						document.write(ano);
+
 
 					</script>
+				</p>
 
-				All rights reserved.
+
+				<p>All rights reserved.</p>
 
 		</div>
 	</div>
