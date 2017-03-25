@@ -18,6 +18,7 @@
 
 		function puxarDoBanco(){
 			$consulta = mysqli_query($link, "SELECT * FROM mensagens ORDER BY id DESC");
+			return $consulta;
 		}
 	}
 ?>
