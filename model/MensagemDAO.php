@@ -1,7 +1,7 @@
 <?php
 	include "connect.php";
 	class MensagemDAO{
-		function adicionarNoBanco($mensagem){
+		public static function adicionarNoBanco($mensagem){
 			$titulo = $mensagem.getTitulo();
 			$mensagem = $mensagem.getMensagem();
 			$id_usuario = $mensagem.getIdUsuario();
@@ -16,7 +16,7 @@
 				return False;
 		}
 
-		function puxarDoBanco(){
+		public static function puxarDoBanco(){
 			$consulta = mysqli_query($link, "SELECT * FROM mensagens ORDER BY id DESC");
 			return $consulta;
 		}
