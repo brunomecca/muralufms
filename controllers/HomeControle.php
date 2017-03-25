@@ -22,6 +22,9 @@
 								$mensagens = $mensagens . '<div class="panel-heading">'. limitar($lnMsg['titulo'],30) . '</div>';
 							}
 							$mensagens = $mensagens . '<div class="limitadorPanel"><div class="panel-body">' . limitar($lnMsg['mensagem'],100);
+
+
+
 							if(strlen($lnMsg['mensagem']) > 100){
 								$mensagens = $mensagens . '<br><button class="btn btn-default btn-xs" data-target="#conteudoMensagem" data-toggle="modal">Ler mais</button></div></div>';
 								$mensagens = $mensagens . '<div class="modal fade" id="conteudoMensagem" role="dialog">
@@ -45,7 +48,22 @@
 							}else
 								$mensagens = $mensagens . '</div></div>';
 
-							$mensagens = $mensagens . '</div>';
+							$mensagens = $mensagens . '
+
+
+								<div class= "text-right">
+
+									<i class="fa fa-thumbs-o-up" aria-hidden="true"></i>'
+
+										.$lnMsg['positivo'].
+
+									'<i class="fa fa-thumbs-o-down" aria-hidden="true"></i>'
+
+										.$lnMsg['negativo'].
+
+								'</div>
+
+							</div>';
 							$mensagens = $mensagens . '</div>';
 								
 						}
