@@ -1,5 +1,4 @@
 <?php
-	$link = mysqli_connect("localhost","root","","muralufms");
 	class MensagemDAO{
 		public static function adicionarNoBanco($mensagem){
 			$titulo = $mensagem.getTitulo();
@@ -16,7 +15,7 @@
 				return False;
 		}
 
-		public static function puxarDoBanco(){
+		public static function puxarDoBanco($link){
 			$consulta = mysqli_query($link, "SELECT * FROM mensagens ORDER BY id DESC");
 			return $consulta;
 		}
